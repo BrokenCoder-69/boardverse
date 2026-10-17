@@ -8,7 +8,7 @@ Status values: NOT STARTED · IN PROGRESS · BLOCKED · TESTING · READY FOR REV
 ---
 
 ## Phase 0 — Environment & Project Setup
-- **Status:** IN PROGRESS
+- **Status:** READY FOR REVIEW
 - **Objective:** Install tools, create the project structure, run Django for the first time.
 - **Features:** Python venv, packages installed, Django project `config`, Git repo, docs.
 - **Files created:** `backend/requirements.txt`, `backend/manage.py`, `backend/config/*`, `.gitignore`, `docs/PHASE_TRACKER.md`
