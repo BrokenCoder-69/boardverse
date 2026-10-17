@@ -1,0 +1,28 @@
+# =============================================================
+# .gitignore — files Git should NEVER track or upload
+# =============================================================
+
+# ---------- Python / Django ----------
+.venv/              # our virtual environment (huge; anyone can rebuild it)
+__pycache__/        # Python's auto-generated cache files
+*.pyc               # compiled Python files
+db.sqlite3          # local database (holds personal test data)
+.pytest_cache/      # pytest's cache
+staticfiles/        # collected static files (generated later)
+media/              # files uploaded by users
+
+# ---------- SECRETS (very important!) ----------
+.env                # passwords and secret keys. NEVER upload this
+# (.env.example IS uploaded on purpose. It only holds fake example values.)
+
+# ---------- Node / React ----------
+node_modules/       # frontend packages (huge; rebuilt with "npm install")
+dist/               # production build output
+coverage/           # test coverage reports
+
+# ---------- Editors / Operating system ----------
+.vscode/*           # personal VS Code settings...
+!.vscode/extensions.json   # ...except the recommended-extensions list
+.idea/              # PyCharm settings
+Thumbs.db           # Windows thumbnail cache
+.DS_Store           # Mac folder cache

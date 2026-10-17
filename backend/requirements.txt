@@ -1,0 +1,44 @@
+# =====================================================================
+# BoardVerse backend — Python packages
+# ---------------------------------------------------------------------
+# This file is a "shopping list" for pip (Python's package installer).
+# Run:  pip install -r requirements.txt
+# Every package here is FREE and open-source.
+# ">=x,<y" means "any version from x up to (but not including) y",
+# so we stay on versions that are known to work together.
+# =====================================================================
+
+# Django = the main web framework (URLs, database, security, admin panel).
+# 5.2 is an LTS (Long Term Support) release = security fixes for years.
+Django>=5.2,<6.0
+
+# Django REST Framework = lets us build JSON APIs that React can talk to.
+djangorestframework>=3.15,<4.0
+
+# Channels = adds WebSockets (live two-way connections) for multiplayer.
+channels>=4.1,<5.0
+
+# Daphne = a server that speaks both normal HTTP and WebSockets.
+# Once installed, "python manage.py runserver" uses it automatically.
+daphne>=4.1,<5.0
+
+# django-allauth = email login, signup, password reset AND social login
+# (Google, GitHub...). This is Django's version of Laravel "Socialite".
+# [socialaccount] adds the extra pieces social login needs.
+django-allauth[socialaccount]>=65.5,<66.0
+
+# django-cors-headers = lets our React site (port 5173) safely call
+# our Django API (port 8000). Without it, the browser blocks requests.
+django-cors-headers>=4.4,<5.0
+
+# drf-spectacular = writes API documentation for us (a Swagger web page).
+drf-spectacular>=0.27,<1.0
+
+# python-dotenv = reads secret settings (passwords, keys) from a ".env" file
+# so secrets never get written into our code.
+python-dotenv>=1.0,<2.0
+
+# ---------- Testing tools (only needed while developing) ----------
+# pytest = a friendly test runner. pytest-django = connects it to Django.
+pytest>=8.0,<9.0
+pytest-django>=4.8,<5.0
